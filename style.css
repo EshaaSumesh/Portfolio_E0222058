@@ -1,17 +1,17 @@
-/* General Body Styles */
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eef2f6; /* Light background */
+    background-color: #eef2f6; 
     color: #333;
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
-/* Hero Section */
+
 .hero {
-    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Blue gradient */
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); 
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -44,28 +44,27 @@ body {
     z-index: 1;
     max-width: 800px;
     margin: 0 auto;
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center content vertically if needed */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
 }
 
-/* Profile Picture Styling */
+
 .profile-pic {
-    width: 180px; /* Increased size for better visibility */
-    height: 180px; /* Increased size for better visibility */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    object-position: 50% 25%; /* Adjust vertical position to show more of the top */
-    border: 6px solid rgba(255, 255, 255, 0.9); /* Slightly thicker white border */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* More prominent shadow */
-    margin-bottom: 25px; /* Space below the image */
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: 50% 25%; 
+    border: 6px solid rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    margin-bottom: 25px; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 .profile-pic:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
+    transform: scale(1.05); }
 
 
 .hero h1 {
@@ -103,10 +102,9 @@ body {
     border-color: white;
 }
 
-/* Main Content Container */
 .main-content {
     max-width: 960px;
-    margin: -30px auto 20px auto; /* Overlap with hero slightly */
+    margin: -30px auto 20px auto; 
     padding: 30px;
     background-color: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -115,7 +113,7 @@ body {
     z-index: 2;
 }
 
-/* Section Styling */
+
 section {
     margin-bottom: 40px;
     padding-bottom: 20px;
@@ -147,7 +145,7 @@ section h2::after {
     border-radius: 2px;
 }
 
-/* Profile Section */
+
 #profile p {
     text-align: center;
     font-size: 1.1em;
@@ -156,7 +154,7 @@ section h2::after {
     margin: 0 auto;
 }
 
-/* List Item Styling (Education, Internships, Projects, Certifications) */
+
 .item-list {
     list-style: none;
     padding: 0;
@@ -165,7 +163,7 @@ section h2::after {
 .item-list li {
     background-color: #fcfcfc;
     border: 1px solid #eee;
-    border-left: 5px solid #2193b0; /* Accent border */
+    border-left: 5px solid #2193b0; 
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -207,10 +205,9 @@ section h2::after {
     margin-bottom: 5px;
     box-shadow: none;
     transform: none;
-    border-left: none; /* Remove accent border for nested list items */
+    border-left: none; 
 }
 
-/* Skills Section */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +217,7 @@ section h2::after {
 }
 
 .skill-tag {
-    background-color: #2193b0; /* Blue */
+    background-color: #2193b0; 
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
@@ -231,11 +228,10 @@ section h2::after {
 }
 
 .skill-tag:hover {
-    background-color: #1a7a92; /* Darker blue */
+    background-color: #1a7a92;
     transform: translateY(-2px);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -246,7 +242,7 @@ footer {
     margin-top: 40px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hero {
         padding: 60px 15px;
@@ -283,9 +279,69 @@ footer {
     }
 
     .profile-pic {
-        width: 120px; /* Adjust size for smaller screens */
+        width: 120px; 
         height: 120px;
     }
+}
+#projects {
+    padding: 40px;
+    background: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #4078c0; 
+}
+
+.project-card .fa-github {
+    margin-right: 8px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
 }
 
 @media (max-width: 480px) {
@@ -301,7 +357,7 @@ footer {
         font-size: 1.6em;
     }
     .profile-pic {
-        width: 100px; /* Further adjust size for very small screens */
+        width: 100px; 
         height: 100px;
     }
 }

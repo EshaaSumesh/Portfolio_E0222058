@@ -1,0 +1,307 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f6; /* Light background */
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Blue gradient */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: rotate(45deg);
+    animation: move-bg 20s infinite linear;
+}
+
+@keyframes move-bg {
+    0% { transform: rotate(45deg) translate(0, 0); }
+    100% { transform: rotate(45deg) translate(-100%, -100%); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center content vertically if needed */
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 180px; /* Increased size for better visibility */
+    height: 180px; /* Increased size for better visibility */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-position: 50% 25%; /* Adjust vertical position to show more of the top */
+    border: 6px solid rgba(255, 255, 255, 0.9); /* Slightly thicker white border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+    margin-bottom: 25px; /* Space below the image */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.hero .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 1.1em;
+}
+
+.hero .contact-info a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero .contact-info a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* Main Content Container */
+.main-content {
+    max-width: 960px;
+    margin: -30px auto 20px auto; /* Overlap with hero slightly */
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #2193b0;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Profile Section */
+#profile p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* List Item Styling (Education, Internships, Projects, Certifications) */
+.item-list {
+    list-style: none;
+    padding: 0;
+}
+
+.item-list li {
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-left: 5px solid #2193b0; /* Accent border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item-list h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.item-list p.subtitle {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.item-list ul {
+    list-style: disc;
+    margin-left: 25px;
+    padding: 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.item-list ul li {
+    background-color: transparent;
+    border: none;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    box-shadow: none;
+    transform: none;
+    border-left: none; /* Remove accent border for nested list items */
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background-color: #2193b0; /* Blue */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-tag:hover {
+    background-color: #1a7a92; /* Darker blue */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #777;
+    font-size: 0.9em;
+    background-color: #f0f4f8;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .hero .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-content {
+        margin: -20px 15px 20px 15px;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .item-list li {
+        padding: 15px;
+    }
+
+    .item-list h3 {
+        font-size: 1.2em;
+    }
+
+    .profile-pic {
+        width: 120px; /* Adjust size for smaller screens */
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+    .profile-pic {
+        width: 100px; /* Further adjust size for very small screens */
+        height: 100px;
+    }
+}
